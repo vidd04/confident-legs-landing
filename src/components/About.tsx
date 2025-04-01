@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
 const About = () => {
   return (
     <section id="about" className="py-20">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="w-full lg:w-1/2">
             <div className="relative">
@@ -15,7 +14,7 @@ const About = () => {
                 className="rounded-2xl shadow-lg"
               />
               <div className="absolute -bottom-8 right-8 bg-white p-6 rounded-lg shadow-lg">
-                <div className="text-xl font-bold text-vein-blue">25+</div>
+                <div className="text-xl font-bold text-emergency-red">25+</div>
                 <div className="text-sm">Years of Excellence</div>
               </div>
             </div>
@@ -32,21 +31,21 @@ const About = () => {
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
-                <CheckCircle className="text-vein-blue mr-3 mt-1" />
+                <CheckCircle className="text-emergency-red mr-3 mt-1" />
                 <div>
                   <h4 className="font-bold text-vein-darkGray">Board-Certified Specialists</h4>
                   <p className="text-gray-600">Our physicians possess specialized training in vascular medicine and surgery.</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="text-vein-blue mr-3 mt-1" />
+                <CheckCircle className="text-emergency-red mr-3 mt-1" />
                 <div>
                   <h4 className="font-bold text-vein-darkGray">Minimally Invasive Procedures</h4>
                   <p className="text-gray-600">Offering effective treatments with minimal downtime and excellent results.</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <CheckCircle className="text-vein-blue mr-3 mt-1" />
+                <CheckCircle className="text-emergency-red mr-3 mt-1" />
                 <div>
                   <h4 className="font-bold text-vein-darkGray">Personalized Care Plans</h4>
                   <p className="text-gray-600">We develop individualized treatment strategies based on your specific needs.</p>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
 
@@ -29,7 +28,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section id="testimonials" className="py-20">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <div className="text-center mb-16">
           <h2 className="section-title">Patient Success Stories</h2>
           <p className="section-subtitle">
@@ -65,13 +64,11 @@ const Testimonials = () => {
           ))}
         </div>
         
-        <div className="mt-16 bg-vein-blue text-white p-8 md:p-12 rounded-2xl">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-6 md:mb-0 md:max-w-xl">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to take the first step toward healthier legs?</h3>
-              <p className="text-white/90">Schedule your consultation today and discover how our experienced team can help you find relief.</p>
-            </div>
-            <button className="bg-white text-vein-blue hover:bg-vein-lightBlue transition-colors px-8 py-4 rounded-lg font-bold">
+        <div className="mt-16 bg-emergency-red text-white p-8 md:p-12 rounded-2xl">
+          <div className="text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6">Ready to Take the First Step?</h3>
+            <p className="text-lg mb-8">Schedule your consultation today and start your journey to healthier legs.</p>
+            <button className="bg-white text-emergency-red hover:bg-emergency-red/5 transition-colors px-8 py-4 rounded-lg font-bold">
               Book Your Consultation
             </button>
           </div>

@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +6,15 @@
 
 @layer base {
   :root {
+    /* Font families */
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-logo: 'Inter', system-ui, sans-serif;
+
+    /* Custom colors */
+    --emergency-red: #FF3B30;
+    --text-primary: #333333;
+    
     --background: 210 20% 98%;
     --foreground: 222.2 84% 4.9%;
 
@@ -52,36 +60,61 @@
     --foreground: 210 40% 98%;
     /* ... keep existing code */
   }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
 
   body {
     @apply bg-background text-foreground font-sans;
   }
 
+  /* Apply heading font to all headings by default */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-heading;
+  }
+
+  html, body {
+    @apply overflow-x-hidden;
+    width: 100%;
   }
 }
 
 @layer components {
+  .container {
+    @apply mx-auto px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16;
+    max-width: 1920px;
+  }
+
   .btn-primary {
-    @apply bg-vein-blue text-white px-6 py-3 rounded-md font-semibold hover:bg-opacity-90 transition-all;
+    @apply bg-emergency-red text-white px-6 py-3 rounded-md font-semibold hover:bg-opacity-90 transition-all;
   }
 
   .btn-secondary {
-    @apply bg-vein-purple text-white px-6 py-3 rounded-md font-semibold hover:bg-opacity-90 transition-all;
+    @apply bg-emergency-red text-white px-6 py-3 rounded-md font-semibold hover:bg-opacity-90 transition-all;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-vein-darkGray mb-4 font-display;
+    @apply text-3xl md:text-4xl font-normal text-vein-darkGray mb-4 font-heading;
   }
 
   .section-subtitle {
-    @apply text-lg text-gray-600 max-w-3xl mx-auto mb-12;
+    @apply text-lg text-gray-600 max-w-3xl mx-auto mb-12 font-sans;
+  }
+
+  .link-primary {
+    @apply text-emergency-red hover:text-emergency-red/80 transition-colors;
+  }
+
+  .top-bar-text {
+    @apply text-sm font-normal;
+  }
+
+  .nav-link {
+    @apply text-base text-text-primary hover:text-emergency-red transition-colors;
+  }
+
+  .contact-button {
+    @apply bg-emergency-red text-white px-6 py-2 rounded hover:bg-emergency-red/90 transition-colors inline-flex items-center gap-2;
+  }
+
+  .logo-text {
+    @apply text-[18px] tracking-wide;
   }
 }

@@ -1,5 +1,5 @@
-
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
 	darkMode: ["class"],
@@ -69,7 +69,9 @@ export default {
 					lightBlue: '#e2f0fb',
 					offWhite: '#f8f9fa',
 					darkGray: '#2d3748'
-				}
+				},
+				'emergency-red': '#FF3B30',
+				'text-primary': '#333333',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -119,8 +121,8 @@ export default {
 				'fade-up': 'fade-up 0.7s ease-out'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['Montserrat', 'sans-serif']
+				sans: ["var(--font-body)", ...fontFamily.sans],
+				heading: ["var(--font-heading)", ...fontFamily.serif],
 			}
 		}
 	},

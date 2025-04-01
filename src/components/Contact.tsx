@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -14,7 +13,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container">
         <div className="text-center mb-16">
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle">
@@ -22,14 +21,14 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-white rounded-xl shadow-md p-8">
             <h3 className="text-2xl font-bold mb-6 text-vein-darkGray">Contact Information</h3>
             
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="bg-vein-lightBlue p-3 rounded-full mr-4">
-                  <Phone className="text-vein-blue" size={20} />
+                <div className="bg-emergency-red/5 p-3 rounded-full mr-4">
+                  <Phone className="text-emergency-red" size={20} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-vein-darkGray">Phone</h4>
@@ -38,8 +37,8 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="bg-vein-lightBlue p-3 rounded-full mr-4">
-                  <Mail className="text-vein-blue" size={20} />
+                <div className="bg-emergency-red/5 p-3 rounded-full mr-4">
+                  <Mail className="text-emergency-red" size={20} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-vein-darkGray">Email</h4>
@@ -48,8 +47,8 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="bg-vein-lightBlue p-3 rounded-full mr-4">
-                  <MapPin className="text-vein-blue" size={20} />
+                <div className="bg-emergency-red/5 p-3 rounded-full mr-4">
+                  <MapPin className="text-emergency-red" size={20} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-vein-darkGray">Location</h4>
@@ -58,16 +57,12 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="bg-vein-lightBlue p-3 rounded-full mr-4">
-                  <Clock className="text-vein-blue" size={20} />
+                <div className="bg-emergency-red/5 p-3 rounded-full mr-4">
+                  <Clock className="text-emergency-red" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-vein-darkGray">Office Hours</h4>
-                  <p className="text-gray-600">
-                    Monday - Friday: 8am - 5pm<br />
-                    Saturday: 9am - 1pm<br />
-                    Sunday: Closed
-                  </p>
+                  <h4 className="font-semibold text-vein-darkGray">Hours</h4>
+                  <p className="text-gray-600">Mon-Fri: 8:00 AM - 6:00 PM<br />Sat-Sun: Closed</p>
                 </div>
               </div>
             </div>
@@ -77,7 +72,7 @@ const Contact = () => {
               <p className="text-gray-600 mb-4">
                 We accept most major insurance plans. Contact our office to verify your coverage.
               </p>
-              <Button variant="outline" className="border-vein-blue text-vein-blue hover:bg-vein-lightBlue">
+              <Button variant="outline" className="border-emergency-red text-emergency-red hover:bg-emergency-red/5">
                 Verify Insurance
               </Button>
             </div>
@@ -130,14 +125,15 @@ const Contact = () => {
                 <label htmlFor="message" className="block mb-2 text-sm font-medium text-vein-darkGray">
                   Message
                 </label>
-                <Textarea 
-                  id="message" 
-                  placeholder="How can we help you?" 
-                  rows={4}
+                <Textarea
+                  id="message"
+                  placeholder="How can we help you?"
+                  className="min-h-[120px]"
+                  required
                 />
               </div>
               
-              <Button type="submit" className="w-full bg-vein-blue hover:bg-vein-purple transition-colors">
+              <Button type="submit" className="w-full">
                 Send Message
               </Button>
             </form>

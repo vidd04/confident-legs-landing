@@ -1,10 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Phone } from 'lucide-react';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -21,50 +18,70 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold text-vein-blue font-display">VeinCare</a>
-          
-          <div className="hidden md:flex items-center space-x-8">
-            <div className="flex space-x-6">
-              <a href="#services" className="text-vein-darkGray hover:text-vein-purple transition-colors">Services</a>
-              <a href="#about" className="text-vein-darkGray hover:text-vein-purple transition-colors">About Us</a>
-              <a href="#testimonials" className="text-vein-darkGray hover:text-vein-purple transition-colors">Testimonials</a>
-              <a href="#faq" className="text-vein-darkGray hover:text-vein-purple transition-colors">FAQ</a>
+    <>
+      {/* Fixed header wrapper */}
+      <div className={`w-full fixed top-0 z-50 transition-all duration-300 bg-white ${scrolled ? 'shadow-sm' : ''}`}>
+        {/* Top bar */}
+        <div className="container">
+          <div className="flex justify-between items-center h-12 py-2 text-[15px] border-b border-gray-100">
+            <div className="flex items-center gap-3">
+              <span className="text-gray-600">We're here 24/7:</span>
+              <a href="tel:(316)555-0116" className="text-emergency-red hover:text-emergency-red/90 font-medium">(316) 555-0116</a>
             </div>
-            
-            <Button className="bg-vein-blue hover:bg-vein-purple transition-colors">
-              <Phone size={16} className="mr-2" />
-              Book Consultation
-            </Button>
+            <div className="text-gray-600">
+              984 N Broadway Suite LL03, Yonkers, NY 10701
+            </div>
           </div>
-          
-          <button 
-            className="md:hidden text-vein-darkGray"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
+
+        {/* Main navigation */}
+        <nav className="relative">
+          <div className="container h-16">
+            <div className="h-full flex justify-between items-center relative">
+              {/* Grey line top */}
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gray-200" />
+              
+              {/* Logo and text */}
+              <a href="/" className="flex items-center gap-2">
+                <img src="/src/assets/232911-84.png" alt="VeinRelief Logo" className="w-6 h-6" />
+                <div>
+                  <span className="logo-text text-black">VeinRelief</span>
+                  <span className="logo-text text-emergency-red"> Solutions</span>
+                </div>
+              </a>
+              
+              <div className="hidden md:flex items-center gap-8">
+                <div className="flex items-center gap-10">
+                  <a href="#services" className="text-gray-600 hover:text-black text-[15px]">
+                    Services
+                  </a>
+                  <a href="#about" className="text-gray-600 hover:text-black text-[15px]">
+                    About Us
+                  </a>
+                  <a href="#testimonials" className="text-gray-600 hover:text-black text-[15px]">
+                    Testimonials
+                  </a>
+                  <a href="#faq" className="text-gray-600 hover:text-black text-[15px]">
+                    FAQ
+                  </a>
+                </div>
+                
+                <button className="bg-emergency-red text-white px-6 py-2.5 text-[15px] rounded-full inline-flex items-center gap-2 hover:bg-emergency-red/90 transition-colors">
+                  <Phone size={18} />
+                  Contact us
+                </button>
+              </div>
+              
+              {/* Grey line bottom */}
+              <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gray-200" />
+            </div>
+          </div>
+        </nav>
       </div>
       
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white shadow-lg animate-fade-in">
-          <div className="flex flex-col space-y-4 px-6 py-6">
-            <a href="#services" className="text-vein-darkGray hover:text-vein-purple transition-colors py-2 border-b border-gray-100">Services</a>
-            <a href="#about" className="text-vein-darkGray hover:text-vein-purple transition-colors py-2 border-b border-gray-100">About Us</a>
-            <a href="#testimonials" className="text-vein-darkGray hover:text-vein-purple transition-colors py-2 border-b border-gray-100">Testimonials</a>
-            <a href="#faq" className="text-vein-darkGray hover:text-vein-purple transition-colors py-2 border-b border-gray-100">FAQ</a>
-            <Button className="bg-vein-blue hover:bg-vein-purple transition-colors mt-2">
-              <Phone size={16} className="mr-2" />
-              Book Consultation
-            </Button>
-          </div>
-        </div>
-      )}
-    </nav>
+      {/* Spacer to prevent content from jumping when nav becomes fixed */}
+      <div className="h-[112px]"></div>
+    </>
   );
 };
 
