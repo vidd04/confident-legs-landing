@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Alert } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 const VeinInfo = () => {
   const symptoms = [
@@ -38,7 +38,7 @@ const VeinInfo = () => {
             </p>
             <div className="mt-6 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
               <div className="flex items-start mb-4">
-                <Alert className="text-emergency-red flex-shrink-0 mr-3 mt-1" size={22} />
+                <AlertTriangle className="text-emergency-red flex-shrink-0 mr-3 mt-1" size={22} />
                 <h4 className="text-xl font-medium">Spider Veins</h4>
               </div>
               <p className="text-gray-600">
