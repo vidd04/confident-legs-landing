@@ -7,6 +7,10 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Treatments from "@/components/Treatments";
 import AppointmentForm from "@/components/AppointmentForm";
 import Footer from "@/components/Footer";
+import Testimonials from "@/components/Testimonials";
+import Services from "@/components/Services";
+import About from "@/components/About";
+import FAQ from "@/components/FAQ";
 
 const Index = () => {
   return (
@@ -16,6 +20,10 @@ const Index = () => {
       <VeinInfo />
       <WhyChooseUs />
       <Treatments />
+      <Services />
+      <About />
+      <Testimonials />
+      <FAQ />
       <AppointmentForm />
       <Footer />
     </div>
