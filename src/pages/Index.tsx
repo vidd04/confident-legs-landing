@@ -11,12 +11,14 @@ import Testimonials from "@/components/Testimonials";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
+import ImagesBar from "@/components/ImagesBar";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <ImagesBar />
       <VeinInfo />
       <WhyChooseUs />
       <Treatments />
