@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { ArrowRight, Plus, Clock, Stethoscope, Heart, Shield } from 'lucide-react';
 
 const Hero = () => {
   return (
     <>
-      <section className="bg-white pt-24 pb-12 md:pt-28 md:pb-16">
+      <section className="bg-white pt-0 pb-12 md:pt-0 md:pb-16 -mt-[112px]">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-left">
@@ -27,9 +26,9 @@ const Hero = () => {
 
             <div className="relative aspect-[5/6] lg:aspect-[4/5] overflow-hidden rounded-lg">
               <img 
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                src="/src/assets/ChatGPT Image Mar 31, 2025, 04_10_39 PM.png"
                 alt="Vein treatment expertise" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -42,21 +41,21 @@ const Hero = () => {
           <div className="flex flex-row" style={{ gap: '1%' }}>
             <div className="w-[32.66%] aspect-[3/2] overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                src="/src/assets/rob-wilson-1_bK_F0U43o-unsplash.jpg" 
                 alt="Medical consultation" 
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="w-[32.66%] aspect-[3/2] overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                src="/src/assets/ty-williams-YtVglBZ1p34-unsplash.jpg" 
                 alt="Medical procedure" 
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="w-[32.66%] aspect-[3/2] overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1581056771107-24247a210356?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                src="/src/assets/tobias-tullius-ns_2zRjVojg-unsplash.jpg" 
                 alt="Medical facility" 
                 className="w-full h-full object-cover"
               />
