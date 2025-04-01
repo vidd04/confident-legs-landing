@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
-import { Phone } from 'lucide-react';
+import { Phone, Menu, X } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,7 +30,7 @@ const Navbar = () => {
               <span className="text-gray-600">We're here 24/7:</span>
               <a href="tel:(316)555-0116" className="text-emergency-red hover:text-emergency-red/90 font-medium">(316) 555-0116</a>
             </div>
-            <div className="text-gray-600">
+            <div className="text-gray-600 hidden md:block">
               984 N Broadway Suite LL03, Yonkers, NY 10701
             </div>
           </div>
@@ -43,7 +45,7 @@ const Navbar = () => {
               
               {/* Logo and text */}
               <a href="/" className="flex items-center gap-2">
-                <img src="/src/assets/232911-84.png" alt="VeinRelief Logo" className="w-6 h-6" />
+                <div className="w-6 h-6 bg-emergency-red rounded-full"></div>
                 <div>
                   <span className="logo-text text-black">VeinRelief</span>
                   <span className="logo-text text-emergency-red"> Solutions</span>
@@ -70,6 +72,36 @@ const Navbar = () => {
                   <Phone size={18} />
                   Contact us
                 </button>
+              </div>
+              
+              {/* Mobile menu */}
+              <div className="md:hidden">
+                <Sheet>
+                  <SheetTrigger asChild>
+                    <button className="p-2" aria-label="Menu">
+                      <Menu className="h-6 w-6" />
+                    </button>
+                  </SheetTrigger>
+                  <SheetContent>
+                    <div className="flex flex-col gap-6 pt-10">
+                      <a href="#services" className="text-gray-800 hover:text-emergency-red text-lg py-2">
+                        Services
+                      </a>
+                      <a href="#about" className="text-gray-800 hover:text-emergency-red text-lg py-2">
+                        About Us
+                      </a>
+                      <a href="#testimonials" className="text-gray-800 hover:text-emergency-red text-lg py-2">
+                        Testimonials
+                      </a>
+                      <a href="#faq" className="text-gray-800 hover:text-emergency-red text-lg py-2">
+                        FAQ
+                      </a>
+                      <a href="#contact" className="text-gray-800 hover:text-emergency-red text-lg py-2">
+                        Contact
+                      </a>
+                    </div>
+                  </SheetContent>
+                </Sheet>
               </div>
               
               {/* Grey line bottom */}

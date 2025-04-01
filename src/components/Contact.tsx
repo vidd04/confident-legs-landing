@@ -1,142 +1,132 @@
+
 import React from 'react';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted');
-  };
-
   return (
-    <section id="contact" className="py-20">
-      <div className="container">
+    <section id="contact" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <div className="text-center mb-16">
-          <h2 className="section-title">Get In Touch</h2>
+          <h2 className="section-title">Contact Us</h2>
           <p className="section-subtitle">
-            Ready to schedule a consultation or have questions? We're here to help.
+            Have questions or ready to schedule your consultation? Our team is here to help.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-white rounded-xl shadow-md p-8">
-            <h3 className="text-2xl font-bold mb-6 text-vein-darkGray">Contact Information</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-emergency-red/5 p-3 rounded-full mr-4">
-                  <Phone className="text-emergency-red" size={20} />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-vein-darkGray">Phone</h4>
-                  <p className="text-gray-600">(555) 123-4567</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-emergency-red/5 p-3 rounded-full mr-4">
-                  <Mail className="text-emergency-red" size={20} />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-vein-darkGray">Email</h4>
-                  <p className="text-gray-600">info@veincarecenter.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-emergency-red/5 p-3 rounded-full mr-4">
-                  <MapPin className="text-emergency-red" size={20} />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-vein-darkGray">Location</h4>
-                  <p className="text-gray-600">123 Healthy Veins Way<br />Medical District, CA 90210</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-emergency-red/5 p-3 rounded-full mr-4">
-                  <Clock className="text-emergency-red" size={20} />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-vein-darkGray">Hours</h4>
-                  <p className="text-gray-600">Mon-Fri: 8:00 AM - 6:00 PM<br />Sat-Sun: Closed</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-8 pt-8 border-t border-gray-200">
-              <h4 className="font-semibold text-vein-darkGray mb-4">Insurance</h4>
-              <p className="text-gray-600 mb-4">
-                We accept most major insurance plans. Contact our office to verify your coverage.
-              </p>
-              <Button variant="outline" className="border-emergency-red text-emergency-red hover:bg-emergency-red/5">
-                Verify Insurance
-              </Button>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-md p-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="bg-white p-8 rounded-xl shadow-sm">
             <h3 className="text-2xl font-bold mb-6 text-vein-darkGray">Send Us a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <form>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label htmlFor="name" className="block mb-2 text-sm font-medium text-vein-darkGray">
-                    Full Name
-                  </label>
-                  <Input id="name" placeholder="Your name" required />
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-emergency-red focus:border-emergency-red"
+                  />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block mb-2 text-sm font-medium text-vein-darkGray">
-                    Phone Number
-                  </label>
-                  <Input id="phone" type="tel" placeholder="(555) 123-4567" required />
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-emergency-red focus:border-emergency-red"
+                  />
                 </div>
               </div>
               
-              <div>
-                <label htmlFor="email" className="block mb-2 text-sm font-medium text-vein-darkGray">
-                  Email Address
-                </label>
-                <Input id="email" type="email" placeholder="your@email.com" required />
+              <div className="mb-4">
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-emergency-red focus:border-emergency-red"
+                />
               </div>
               
-              <div>
-                <label htmlFor="service" className="block mb-2 text-sm font-medium text-vein-darkGray">
-                  Service of Interest
-                </label>
+              <div className="mb-4">
+                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service of Interest</label>
                 <select 
                   id="service" 
-                  className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-emergency-red focus:border-emergency-red bg-white"
                 >
                   <option value="">Select a service</option>
-                  <option value="consultation">Initial Consultation</option>
-                  <option value="sclerotherapy">Sclerotherapy</option>
-                  <option value="laser">Endovenous Laser Treatment</option>
-                  <option value="assessment">Vein Mapping & Assessment</option>
+                  <option value="varicose">Varicose Vein Treatment</option>
+                  <option value="spider">Spider Vein Treatment</option>
+                  <option value="assessment">Vein Assessment</option>
                   <option value="compression">Compression Therapy</option>
                 </select>
               </div>
               
-              <div>
-                <label htmlFor="message" className="block mb-2 text-sm font-medium text-vein-darkGray">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  placeholder="How can we help you?"
-                  className="min-h-[120px]"
-                  required
-                />
+              <div className="mb-6">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                <textarea 
+                  id="message" 
+                  rows={4} 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-emergency-red focus:border-emergency-red"
+                ></textarea>
               </div>
               
-              <Button type="submit" className="w-full">
+              <button 
+                type="submit"
+                className="w-full bg-emergency-red text-white py-3 px-4 rounded-md hover:bg-emergency-red/90 transition-colors font-semibold"
+              >
                 Send Message
-              </Button>
+              </button>
             </form>
+          </div>
+          
+          <div className="flex flex-col gap-6">
+            <div className="bg-white p-8 rounded-xl shadow-sm h-max">
+              <h3 className="text-2xl font-bold mb-6 text-vein-darkGray">Contact Information</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <Phone className="text-emergency-red h-5 w-5 mt-1 mr-4" />
+                  <div>
+                    <h4 className="font-bold text-gray-900">Phone</h4>
+                    <p className="text-gray-600">(555) 123-4567</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Mail className="text-emergency-red h-5 w-5 mt-1 mr-4" />
+                  <div>
+                    <h4 className="font-bold text-gray-900">Email</h4>
+                    <p className="text-gray-600">info@veinreliefsolutions.com</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <MapPin className="text-emergency-red h-5 w-5 mt-1 mr-4" />
+                  <div>
+                    <h4 className="font-bold text-gray-900">Address</h4>
+                    <p className="text-gray-600">984 N Broadway Suite LL03<br />Yonkers, NY 10701</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Clock className="text-emergency-red h-5 w-5 mt-1 mr-4" />
+                  <div>
+                    <h4 className="font-bold text-gray-900">Hours</h4>
+                    <p className="text-gray-600">
+                      Monday - Friday: 8am - 6pm<br />
+                      Saturday: 9am - 1pm<br />
+                      Sunday: Closed
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <h3 className="text-2xl font-bold mb-4 text-vein-darkGray">Insurance</h3>
+              <p className="text-gray-600 mb-2">
+                We accept most major insurance plans. Please contact our office to verify your insurance coverage.
+              </p>
+            </div>
           </div>
         </div>
       </div>
