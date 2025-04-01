@@ -2,11 +2,10 @@
 import React from 'react';
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
-import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
+import VeinInfo from "@/components/VeinInfo";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import Treatments from "@/components/Treatments";
+import AppointmentForm from "@/components/AppointmentForm";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -14,11 +13,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <Services />
-      <About />
-      <Testimonials />
-      <FAQ />
-      <Contact />
+      <VeinInfo />
+      <WhyChooseUs />
+      <Treatments />
+      <AppointmentForm />
       <Footer />
     </div>
   );
