@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import redLegsImage from "../assets/ChatGPT Image Apr 1, 2025, 12_08_00 PM.png";
@@ -11,7 +12,7 @@ const Hero = () => {
           {/* Text Content */}
           <div className="flex flex-col justify-center pt-32 lg:pt-36 pb-4 lg:pb-6">
             <div className="lg:max-w-[540px]">
-              <h1 className="text-[36px] md:text-[48px] leading-[1.2] text-black mb-4 font-semibold">
+              <h1 className="text-[40px] md:text-[52px] lg:text-[72px] leading-[110%] text-black mb-4 font-semibold">
                 Restore <span className="font-emphasis">Healthy Leg</span> Function and Comfort
               </h1>
               <p className="text-lg text-gray-600 mb-8">

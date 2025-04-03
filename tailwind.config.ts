@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
@@ -123,6 +124,8 @@ export default {
 			fontFamily: {
 				sans: ["var(--font-body)", ...fontFamily.sans],
 				heading: ["var(--font-heading)", ...fontFamily.serif],
+				emphasis: ["var(--font-emphasis)", ...fontFamily.serif],
+				logo: ["var(--font-heading)", ...fontFamily.sans],
 			}
 		}
 	},
