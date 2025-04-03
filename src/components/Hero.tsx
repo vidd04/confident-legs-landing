@@ -5,12 +5,12 @@ import redLegsImage from "../assets/ChatGPT Image Apr 1, 2025, 12_08_00 PM.png";
 
 const Hero = () => {
   return (
-    <section className="w-full relative -mt-[112px]">
+    <section className="w-full relative -mt-[40px]">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[#FF3B30] hidden lg:block" />
       <div className="container relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-0">
           {/* Text Content */}
-          <div className="flex flex-col justify-center pt-32 lg:pt-36 pb-4 lg:pb-6">
+          <div className="flex flex-col justify-center pt-12 lg:pt-16 pb-4 lg:pb-6">
             <div className="lg:max-w-[540px]">
               <h1 className="text-[40px] md:text-[52px] lg:text-[72px] leading-[110%] text-black mb-4 font-semibold">
                 Restore <span className="font-emphasis">Healthy Leg</span> Function and Comfort

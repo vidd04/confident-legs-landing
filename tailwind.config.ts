@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
@@ -73,6 +72,7 @@ export default {
 				},
 				'emergency-red': '#FF3B30',
 				'text-primary': '#333333',
+				'soft-peach': '#FFF6F0',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
