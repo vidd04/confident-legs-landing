@@ -10,9 +10,9 @@ const Hero = () => {
           <div className="flex flex-col justify-center pt-32 lg:pt-36 pb-4 lg:pb-6">
             <div className="lg:max-w-[540px]">
               <h1 className="text-[36px] md:text-[48px] leading-[1.2] text-black mb-4 font-semibold">
-                Restore <span className="font-emphasis py-[23px] mx-0 px-0 text-left text-7xl font-medium">Healthy Veins
-Healthy Legs
-Healthy You.</span> Function and Comfort
+                Restore <span className="font-emphasis py-[23px] mx-0 px-0 text-left text-7xl font-medium">Healthy Legs
+Healthy Veins
+Healthy  You</span> Function and Comfort
               </h1>
               <p className="text-lg text-gray-600 mb-8">
                 Experience lasting relief and improved leg health—backed by our 25+ years of expert vein care.
