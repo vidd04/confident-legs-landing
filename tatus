@@ -1,0 +1,7 @@
+[33mcommit 1be4d1d6ae0fbb991dcf5cfdc03e8d54af54173e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: gpt-engineer-app[bot] <159125892+gpt-engineer-app[bot]@users.noreply.github.com>
+Date:   Sat Mar 29 16:15:13 2025 +0000
+
+    feat: Create landing page
+    
+    Implement the landing page with the provided hero value prop and subtitle.

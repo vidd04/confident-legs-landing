@@ -1,36 +1,35 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import redLegsImage from "../assets/ChatGPT Image Apr 1, 2025, 12_08_00 PM.png";
 
 const Hero = () => {
   return (
-    <section className="bg-white pt-0 pb-12 md:pt-0 md:pb-16 -mt-[112px]">
-      <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-left pt-24 lg:pt-32">
-            <h1 className="text-[32px] md:text-[48px] leading-[1.2] font-normal text-black tracking-[-0.02em] mb-6">
-              Find Relief From Painful,
-              <br />
-              Unsightly Vein Conditions
-            </h1>
-            
-            <p className="text-lg text-gray-600 mb-8">
-              Our specialized treatments help restore healthy circulation and confidence, 
-              with minimal discomfort and recovery time.
-            </p>
-
-            <Button className="bg-emergency-red text-white px-8 py-6 rounded-full inline-flex items-center gap-2 hover:bg-emergency-red/90 transition-colors text-lg">
-              Schedule a Consultation
-              <ArrowRight className="w-5 h-5" />
-            </Button>
+    <section className="w-full relative -mt-[112px]">
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-[#FF3B30] hidden lg:block" />
+      <div className="container relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-0">
+          {/* Text Content */}
+          <div className="flex flex-col justify-center pt-32 lg:pt-36 pb-4 lg:pb-6">
+            <div className="lg:max-w-[540px]">
+              <h1 className="text-[36px] md:text-[48px] leading-[1.2] text-black mb-4 font-semibold">
+                Restore <span className="font-emphasis">Healthy Leg</span> Function and Comfort
+              </h1>
+              <p className="text-lg text-gray-600 mb-8">
+                Experience lasting relief and improved leg health—backed by our 25+ years of expert vein care.
+              </p>
+              <button className="bg-emergency-red text-white px-6 py-3 rounded-full inline-flex items-center gap-2 text-lg hover:bg-emergency-red/90 transition-all w-fit">
+                Schedule Consultation
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
-          <div className="relative aspect-[5/6] lg:aspect-[4/5] overflow-hidden rounded-lg">
-            <img 
-              src="/src/assets/ChatGPT Image Mar 31, 2025, 04_10_39 PM.png"
-              alt="Vein treatment expertise" 
-              className="w-full h-full object-contain"
+          {/* Hero Image */}
+          <div className="w-full bg-[#FF3B30] lg:bg-transparent pt-24 lg:pt-28">
+            <img
+              src={redLegsImage}
+              alt="Healthy legs"
+              className="w-full h-auto object-contain"
             />
           </div>
         </div>

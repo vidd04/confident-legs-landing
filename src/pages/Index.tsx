@@ -1,9 +1,8 @@
-
 import React from 'react';
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import VeinInfo from "@/components/VeinInfo";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import VeinInfo from "@/components/VeinInfo";
 import Treatments from "@/components/Treatments";
 import AppointmentForm from "@/components/AppointmentForm";
 import Footer from "@/components/Footer";
@@ -18,9 +17,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <WhyChooseUs />
       <ImagesBar />
       <VeinInfo />
-      <WhyChooseUs />
       <Treatments />
       <Services />
       <About />
