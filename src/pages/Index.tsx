@@ -4,13 +4,13 @@ import Hero from "@/components/Hero";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import VeinInfo from "@/components/VeinInfo";
 import Treatments from "@/components/Treatments";
-import AppointmentForm from "@/components/AppointmentForm";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
-import Services from "@/components/Services";
-import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import ImagesBar from "@/components/ImagesBar";
+import Locations from '@/components/Locations';
+import OurDoctor from '@/components/OurDoctor';
+import Blog from '@/components/Blog';
 
 const Index = () => {
   return (
@@ -21,11 +21,11 @@ const Index = () => {
       <ImagesBar />
       <VeinInfo />
       <Treatments />
-      <Services />
-      <About />
       <Testimonials />
+      <OurDoctor />
+      <Locations />
       <FAQ />
-      <AppointmentForm />
+      <Blog />
       <Footer />
     </div>
   );

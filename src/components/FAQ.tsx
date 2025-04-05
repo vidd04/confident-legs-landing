@@ -31,37 +31,30 @@ const faqItems = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-20">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Frequently Asked Questions</h2>
-          <p className="section-subtitle">Find answers to common questions about vein care and treatment.</p>
-        </div>
+    <section id="faq" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-8 md:px-12 lg:px-16">
+        <div className="border-t-4 border-emergency-red w-32 mb-6"></div>
+        <h2 className="text-[36px] md:text-[48px] leading-[1.2] font-logo text-black mb-16">
+          Frequently Asked Questions
+        </h2>
 
-        <Accordion type="single" collapsible className="max-w-3xl mx-auto">
-          {faqItems.map((item, index) => (
-            <AccordionItem 
-              key={index} 
-              value={`item-${index}`}
-              className="bg-white rounded-lg shadow-sm border border-gray-200"
-            >
-              <AccordionTrigger className="px-6 py-4 text-left font-semibold text-vein-darkGray hover:text-emergency-red">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 text-gray-600">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-
-        <div className="text-center mt-12">
-          <p className="mb-6 text-gray-600">Still have questions? We're here to help.</p>
-          <a href="#contact" 
-            className="inline-block bg-emergency-red text-white font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all"
-          >
-            Contact Us
-          </a>
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible>
+            {faqItems.map((item, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="bg-white border border-gray-200 rounded-none border-b-0 last:border-b"
+              >
+                <AccordionTrigger className="px-6 py-4 text-left font-logo text-black hover:text-emergency-red">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-sm text-gray-600">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>
