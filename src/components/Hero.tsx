@@ -1,5 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import heroImage from '../assets/Adobe Express - file (1).png';
 
 const Hero = () => {
   return (
@@ -31,9 +33,9 @@ const Hero = () => {
           <div className="relative h-full hidden lg:block">
             <div className="absolute top-[100px] right-0 w-full max-w-[500px] aspect-square">
               <img 
-                src="/src/assets/Adobe Express - file (1).png" 
-                alt="Leg close-up showing varicose veins" 
-                className="w-full h-full object-contain"
+                alt="Leg close-up showing varicose veins"
+                className="w-full h-full object-cover rounded-lg"
+                src={heroImage}
               />
             </div>
           </div>

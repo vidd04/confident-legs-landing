@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Link, useNavigate } from 'react-router-dom';
+import logo from '../assets/ChatGPT Image Apr 3, 2025, 05_17_35 PM.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -51,8 +52,8 @@ const Navbar = () => {
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gray-200" />
               
               {/* Logo and text */}
-              <Link to="/" className="flex items-center gap-3">
-                <img src="/src/assets/ChatGPT Image Apr 3, 2025, 05_17_35 PM.png" alt="VeinRelief Logo" className="w-10 h-10" />
+              <Link to="/" className="flex items-center gap-2">
+                <img src={logo} alt="VeinRelief Logo" className="w-10 h-10" />
                 <div className="flex items-center">
                   <span className="font-logo text-[24px] tracking-tighter text-black">VeinRelief</span>
                   <span className="font-logo text-[24px] tracking-tighter text-emergency-red"> Solutions</span>

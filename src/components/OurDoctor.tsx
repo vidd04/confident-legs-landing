@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Globe2 } from 'lucide-react';
+import doctorImage from '../assets/Furqan-Tejani-MD.jpg';
 
 const OurDoctor = () => {
   return (
@@ -14,9 +15,9 @@ const OurDoctor = () => {
           {/* Image Column */}
           <div>
             <img 
-              src="/src/assets/Furqan-Tejani-MD.jpg" 
-              alt="Dr. Furqan H. Tejani" 
-              className="w-full max-w-[500px] h-auto"
+              src={doctorImage}
+              alt="Dr. Furqan Tejani"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
 

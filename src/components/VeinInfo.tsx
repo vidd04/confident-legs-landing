@@ -1,4 +1,6 @@
 import React from 'react';
+import treatmentImage from '../assets/iStock-541269710.jpg';
+import consultationImage from '../assets/iarwK34NqSZMtnwJQpqn8R-1000-80.jpg';
 
 const VeinInfo = () => {
   const symptoms = [
@@ -44,9 +46,9 @@ const VeinInfo = () => {
           <div className="bg-white p-4 shadow-sm border border-gray-100">
             <div className="mb-3">
               <img 
-                src="/src/assets/iStock-541269710.jpg" 
+                src={treatmentImage}
                 alt="Varicose veins on leg" 
-                className="w-full h-[120px] object-cover object-center"
+                className="w-full h-[120px] object-cover object-center rounded-lg"
               />
             </div>
             <div className="flex flex-col h-[calc(100%-136px)]">
@@ -78,9 +80,9 @@ const VeinInfo = () => {
           <div className="bg-white p-4 shadow-sm border border-gray-100">
             <div className="mb-3">
               <img 
-                src="/src/assets/iarwK34NqSZMtnwJQpqn8R-1000-80.jpg" 
+                src={consultationImage}
                 alt="Spider veins close-up" 
-                className="w-full h-[120px] object-cover object-center"
+                className="w-full h-[120px] object-cover object-center rounded-lg"
               />
             </div>
             <div className="flex flex-col h-[calc(100%-136px)]">
