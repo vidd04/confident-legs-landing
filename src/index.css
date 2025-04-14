@@ -4,6 +4,46 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --content-scale: 1;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+  :root {
+    --content-scale: 0.9;
+  }
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  transform: scale(var(--content-scale));
+  transform-origin: 0 0;
+  height: calc(100vh / var(--content-scale));
+  width: calc(100vw / var(--content-scale));
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scale-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 @layer base {
   :root {
     /* Font families */

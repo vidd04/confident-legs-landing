@@ -10,14 +10,16 @@ const Contact = lazy(() => import('./pages/Contact'));
 const App = () => {
   return (
     <ErrorBoundary>
-      <Router>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </Suspense>
-      </Router>
+      <div className="scale-wrapper">
+        <Router>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
+        </Router>
+      </div>
     </ErrorBoundary>
   );
 };

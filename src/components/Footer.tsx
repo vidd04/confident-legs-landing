@@ -3,7 +3,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Phone, MapPin, Mail, Clock } fr
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-vein-darkGray text-white">
+    <footer className="w-full bg-vein-darkGray text-white mt-auto">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
