@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/", "destination": "/locations/yonkers-ny", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
