@@ -45,7 +45,7 @@ const Navbar = () => {
             >
               984 N Broadway Suite LL03
             </a>
-            <a href="tel:9143446743" className="text-gray-600 font-logo hover:underline transition-all whitespace-nowrap ml-4" style={{ borderRadius: 0 }}>
+            <a href="tel:9143446743" className="text-emergency-red font-logo hover:underline transition-all whitespace-nowrap ml-4" style={{ borderRadius: 0 }}>
               914-344-6743
             </a>
           </div>
