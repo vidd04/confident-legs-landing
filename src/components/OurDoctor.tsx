@@ -8,7 +8,7 @@ const OurDoctor = () => {
       <div className="container mx-auto px-8 md:px-12 lg:px-16">
         <div className="border-t-4 border-emergency-red w-24 mb-4"></div>
         <h2 className="text-[32px] md:text-[40px] leading-tight font-logo text-black mb-12">
-          Our Doctor
+          About us
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -62,10 +62,9 @@ const OurDoctor = () => {
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                 <span className="text-gray-600">Now accepting new patients</span>
               </div>
-              <button className="bg-emergency-red text-white px-6 py-3 rounded-full inline-flex items-center gap-2 text-lg hover:bg-emergency-red/90 transition-all">
-                Schedule Now
-                <ArrowRight className="w-5 h-5" />
-              </button>
+              <a href="tel:9143446743" className="w-full sm:w-auto mx-auto sm:mx-0 bg-emergency-red text-white px-6 py-3 inline-flex justify-center items-center gap-2 text-lg hover:bg-emergency-red/90 transition-all font-logo" style={{ borderRadius: 0 }}>
+                Schedule an appointment today
+              </a>
             </div>
           </div>
         </div>

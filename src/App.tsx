@@ -5,7 +5,10 @@ import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load components for code splitting
 const Index = lazy(() => import('./pages/Index'));
-const Contact = lazy(() => import('./pages/Contact'));
+// const Contact = lazy(() => import('./pages/Contact')); // Commented out for later use
+const Conditions = lazy(() => import('./pages/Conditions'));
+const Treatments = lazy(() => import('./pages/Treatments'));
+const LocationsYonkersNY = lazy(() => import('./pages/LocationsYonkersNY'));
 
 const App = () => {
   return (
@@ -15,7 +18,10 @@ const App = () => {
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/contact" element={<Contact />} />
+              {/* <Route path="/contact" element={<Contact />} /> */}
+              <Route path="/conditions" element={<Conditions />} />
+              <Route path="/treatments" element={<Treatments />} />
+              <Route path="/locations/yonkers-ny" element={<LocationsYonkersNY />} />
             </Routes>
           </Suspense>
         </Router>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/ChatGPT Image Apr 3, 2025, 05_17_35 PM.png';
@@ -7,6 +7,8 @@ import logo from '../assets/ChatGPT Image Apr 3, 2025, 05_17_35 PM.png';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [locationsOpen, setLocationsOpen] = useState(false);
+  const locationsTimeout = useRef<NodeJS.Timeout | null>(null);
   const isMobile = useIsMobile();
   const navigate = useNavigate();
 
@@ -30,65 +32,90 @@ const Navbar = () => {
   return (
     <>
       {/* Fixed header wrapper */}
-      <div className={`w-full fixed top-0 z-50 transition-all duration-300 bg-white ${scrolled ? 'shadow-sm' : ''}`}>
+      <div className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 bg-white ${scrolled ? 'shadow-sm' : ''}`}
+        style={{ position: 'fixed' }}>
         {/* Top bar */}
         <div className="container px-6 md:px-8 lg:px-12">
-          <div className="flex justify-between items-center h-10 py-1.5 text-[14px] border-b border-gray-100">
-            <div className="flex items-center gap-3">
-              <span className="text-gray-600 font-logo">Open Mon-Fri: 9AM - 5PM</span>
-              <a href="tel:(316)555-0116" className="text-emergency-red hover:text-emergency-red/90 font-logo">(316) 555-0116</a>
-            </div>
-            <div className="text-gray-600 hidden md:block font-logo">
-              984 N Broadway Suite LL03, Yonkers, NY 10701
-            </div>
+          <div className="flex justify-between items-center h-10 py-1.5 text-[14px] border-b border-gray-100 w-full">
+            <span className="text-gray-600 font-logo whitespace-nowrap overflow-hidden text-ellipsis">984 N Broadway Suite LL03</span>
+            <a href="tel:9143446743" className="text-gray-600 font-logo hover:underline transition-all whitespace-nowrap ml-4" style={{ borderRadius: 0 }}>
+              914-344-6743
+            </a>
           </div>
         </div>
 
         {/* Main navigation */}
         <nav className="relative">
-          <div className="container px-6 md:px-8 lg:px-12 h-16">
-            <div className="h-full flex justify-between items-center relative">
+          <div className="container px-6 md:px-8 lg:px-12 h-12 sm:h-16">
+            <div className="h-full flex flex-nowrap justify-between items-center relative gap-2 md:gap-4 py-1 sm:py-0">
               {/* Grey line top */}
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gray-200" />
-              
               {/* Logo and text */}
-              <Link to="/" className="flex items-center gap-2">
-                <img src={logo} alt="VeinRelief Logo" className="w-10 h-10" />
-                <div className="flex items-center">
-                  <span className="font-logo text-[24px] tracking-tighter text-black">VeinRelief</span>
-                  <span className="font-logo text-[24px] tracking-tighter text-emergency-red"> Solutions</span>
+              <Link to="/" className="flex-shrink-0 flex items-center gap-2 min-w-0">
+                <img src={logo} alt="VeinRelief Logo" className="w-6 h-6 sm:w-8 sm:h-8 md:w-8 md:h-8" />
+                <div className="flex items-center min-w-0">
+                  <span className="font-logo text-[16px] sm:text-[20px] md:text-[18px] tracking-tighter text-black whitespace-nowrap">VeinRelief</span>
+                  <span className="font-logo text-[16px] sm:text-[20px] md:text-[18px] tracking-tighter text-emergency-red whitespace-nowrap"> Solutions</span>
                 </div>
               </Link>
-              
               {/* Desktop Navigation */}
-              <div className="hidden md:flex items-center gap-8">
-                <div className="flex items-center gap-10">
-                  <a href="#vein-info" className="font-logo text-[15px] text-gray-600 hover:text-black">
+              <div className="hidden lg:flex items-center gap-4 lg:gap-10 flex-nowrap min-w-0">
+                <div className="flex items-center gap-4 lg:gap-10 flex-nowrap min-w-0">
+                  <Link to="/conditions" className="font-logo text-[15px] text-gray-600 hover:text-black whitespace-nowrap">
                     About Vein Conditions
-                  </a>
-                  <a href="#why-choose-us" className="font-logo text-[15px] text-gray-600 hover:text-black">
-                    Why Choose Us
-                  </a>
-                  <a href="#treatments" className="font-logo text-[15px] text-gray-600 hover:text-black">
+                  </Link>
+                  <div
+                    className="relative group"
+                    onMouseEnter={() => {
+                      if (locationsTimeout.current) clearTimeout(locationsTimeout.current);
+                      setLocationsOpen(true);
+                    }}
+                    onMouseLeave={() => {
+                      locationsTimeout.current = setTimeout(() => setLocationsOpen(false), 200);
+                    }}
+                    tabIndex={0}
+                  >
+                    <button
+                      className="font-logo text-[15px] text-gray-600 hover:text-black flex items-center gap-1 focus:outline-none whitespace-nowrap"
+                      onClick={() => setLocationsOpen((open) => !open)}
+                      type="button"
+                    >
+                      Locations <ChevronDown size={16} />
+                    </button>
+                    <div
+                      className={`absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg z-50 rounded-md transition-all duration-150 ${locationsOpen ? 'block' : 'hidden'}`}
+                      onMouseEnter={() => {
+                        if (locationsTimeout.current) clearTimeout(locationsTimeout.current);
+                        setLocationsOpen(true);
+                      }}
+                      onMouseLeave={() => {
+                        locationsTimeout.current = setTimeout(() => setLocationsOpen(false), 200);
+                      }}
+                    >
+                      <Link
+                        to="/locations/yonkers-ny"
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100 font-logo"
+                        onClick={() => setLocationsOpen(false)}
+                      >
+                        Yonkers, NY
+                      </Link>
+                    </div>
+                  </div>
+                  <Link to="/treatments" className="font-logo text-[15px] text-gray-600 hover:text-black whitespace-nowrap">
                     Treatments
-                  </a>
-                  <Link to="/contact" className="font-logo text-[15px] text-gray-600 hover:text-black">
-                    Appointments
                   </Link>
                 </div>
-                
-                <button 
-                  onClick={() => navigate('/contact')}
-                  className="bg-emergency-red text-white px-6 py-2.5 text-[15px] rounded-full inline-flex items-center gap-2 hover:bg-emergency-red/90 transition-colors font-logo"
+                <a 
+                  href="tel:9143446743"
+                  className="bg-emergency-red text-white px-4 py-2 text-[15px] inline-flex items-center gap-2 hover:bg-emergency-red/90 transition-colors font-logo whitespace-nowrap md:hidden lg:flex" style={{ borderRadius: 0 }}
                 >
                   <Phone size={18} />
-                  Contact us
-                </button>
+                  Call us
+                </a>
               </div>
-              
               {/* Mobile menu button */}
               <button 
-                className="md:hidden flex items-center" 
+                className="lg:hidden flex items-center" 
                 onClick={toggleMobileMenu}
                 aria-label="Toggle mobile menu"
               >
@@ -98,7 +125,6 @@ const Navbar = () => {
                   <Menu className="h-6 w-6 text-gray-700" />
                 )}
               </button>
-              
               {/* Grey line bottom */}
               <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gray-200" />
             </div>
@@ -107,48 +133,54 @@ const Navbar = () => {
         
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 shadow-md">
+          <div className="lg:hidden bg-white border-t border-gray-100 shadow-md">
             <div className="container py-4">
               <div className="flex flex-col gap-4">
-                <a 
-                  href="#vein-info" 
+                <Link 
+                  to="/conditions" 
                   className="text-gray-700 py-2 border-b border-gray-100"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About Vein Conditions
-                </a>
-                <a 
-                  href="#why-choose-us" 
-                  className="text-gray-700 py-2 border-b border-gray-100"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Why Choose Us
-                </a>
-                <a 
-                  href="#treatments" 
+                </Link>
+                <div>
+                  <button
+                    className="w-full text-left text-gray-700 py-2 border-b border-gray-100 flex items-center gap-1 font-logo"
+                    onClick={() => setLocationsOpen((open) => !open)}
+                    type="button"
+                  >
+                    Locations <ChevronDown size={16} />
+                  </button>
+                  {locationsOpen && (
+                    <div className="pl-4">
+                      <Link
+                        to="/locations/yonkers-ny"
+                        className="block py-2 text-gray-700 hover:bg-gray-100 font-logo"
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          setLocationsOpen(false);
+                        }}
+                      >
+                        Yonkers, NY
+                      </Link>
+                    </div>
+                  )}
+                </div>
+                <Link 
+                  to="/treatments" 
                   className="text-gray-700 py-2 border-b border-gray-100"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Treatments
-                </a>
-                <Link 
-                  to="/contact" 
-                  className="text-gray-700 py-2 border-b border-gray-100"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Appointments
                 </Link>
                 <div className="py-2">
-                  <button 
-                    onClick={() => {
-                      navigate('/contact');
-                      setMobileMenuOpen(false);
-                    }}
+                  <a 
+                    href="tel:9143446743"
                     className="w-full bg-emergency-red text-white px-4 py-3 rounded-md inline-flex items-center justify-center gap-2 hover:bg-emergency-red/90 transition-colors"
                   >
                     <Phone size={18} />
-                    Contact us
-                  </button>
+                    Call us
+                  </a>
                 </div>
               </div>
             </div>

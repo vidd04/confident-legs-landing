@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -140,9 +139,9 @@ const AppointmentForm = () => {
           
           <div className="mt-8 text-center">
             <p className="text-gray-600">
-              Prefer to speak with someone directly? Call us at 
-              <a href="tel:(316)555-0116" className="text-emergency-red font-medium mx-1 hover:text-emergency-red/90">
-                (316) 555-0116
+              Prefer to speak with someone directly? Call us at
+              <a href="tel:9143446743" className="bg-emergency-red text-white font-logo mx-1 px-3 py-1 inline-block" style={{ borderRadius: 0 }}>
+                914-344-6743
               </a>
               to schedule your appointment.
             </p>

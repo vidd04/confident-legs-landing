@@ -103,8 +103,8 @@ const Treatments = () => {
                 <FileText className="mr-2" size={18} />
                 <span>We also offer flexible payment plans for cosmetic procedures.</span>
               </div>
-              <Button className="bg-emergency-red text-white hover:bg-emergency-red/90 font-logo">
-                Verify Insurance Coverage
+              <Button className="bg-emergency-red text-white hover:bg-emergency-red/90 font-logo" asChild>
+                <a href="tel:9143446743">Verify Insurance Coverage</a>
               </Button>
             </div>
             
@@ -114,12 +114,9 @@ const Treatments = () => {
                 Our insurance specialists can help determine if your treatment will be covered and what your out-of-pocket costs might be.
               </p>
               <p className="text-sm font-logo text-black mb-2">Call us directly:</p>
-              <a href="tel:(316)555-0116" className="text-emergency-red text-xl font-logo mb-6 hover:text-emergency-red/90">
-                (316) 555-0116
+              <a href="tel:9143446743" className="bg-emergency-red text-white text-xl font-logo mb-3 hover:bg-emergency-red/90 px-4 py-2 w-full block text-center" style={{ borderRadius: 0 }}>
+                914-344-6743
               </a>
-              <Button variant="outline" className="border-emergency-red text-emergency-red hover:bg-emergency-red/5 font-logo">
-                Schedule a Free Insurance Consultation
-              </Button>
             </div>
           </div>
         </div>
