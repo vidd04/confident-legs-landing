@@ -28,7 +28,7 @@ const OurDoctor = () => {
             </h3>
 
             {/* Highlight Boxes */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
               <div className="bg-emergency-red/10 p-4 border border-emergency-red/20">
                 <div className="text-emergency-red font-logo text-xl mb-1">Chief of Cardiology</div>
                 <p className="text-gray-600 text-sm">Leading expert in cardiovascular care</p>
@@ -36,6 +36,10 @@ const OurDoctor = () => {
               <div className="bg-emergency-red/10 p-4 border border-emergency-red/20">
                 <div className="text-emergency-red font-logo text-xl mb-1">150+ Fellows</div>
                 <p className="text-gray-600 text-sm">Trained & mentored medical professionals</p>
+              </div>
+              <div className="bg-emergency-red/10 p-4 border border-emergency-red/20">
+                <div className="text-emergency-red font-logo text-xl mb-1">25+ Years of Experience</div>
+                <p className="text-gray-600 text-sm">Providing expert care in cardiology and venous disease</p>
               </div>
             </div>
 
