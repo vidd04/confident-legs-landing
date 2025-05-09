@@ -37,7 +37,14 @@ const Navbar = () => {
         {/* Top bar */}
         <div className="container px-6 md:px-8 lg:px-12">
           <div className="flex justify-between items-center h-10 py-1.5 text-[14px] border-b border-gray-100 w-full">
-            <span className="text-gray-600 font-logo whitespace-nowrap overflow-hidden text-ellipsis">984 N Broadway Suite LL03</span>
+            <a
+              href="https://maps.app.goo.gl/3rRE8KvHyG3a3buQA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 font-logo whitespace-nowrap overflow-hidden text-ellipsis hover:underline"
+            >
+              984 N Broadway Suite LL03
+            </a>
             <a href="tel:9143446743" className="text-gray-600 font-logo hover:underline transition-all whitespace-nowrap ml-4" style={{ borderRadius: 0 }}>
               914-344-6743
             </a>

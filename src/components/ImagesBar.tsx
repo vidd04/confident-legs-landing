@@ -1,15 +1,18 @@
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import robWilson from '../assets/rob-wilson-1_bK_F0U43o-unsplash.jpg';
+import tobiasTullius from '../assets/tobias-tullius-ns_2zRjVojg-unsplash.jpg';
+import tyWilliams from '../assets/ty-williams-YtVglBZ1p34-unsplash.jpg';
 
 const ImagesBar = () => {
   const images = [{
-    src: "/src/assets/rob-wilson-1_bK_F0U43o-unsplash.jpg",
+    src: robWilson,
     alt: "Vein treatment procedure"
   }, {
-    src: "/src/assets/tobias-tullius-ns_2zRjVojg-unsplash.jpg",
+    src: tobiasTullius,
     alt: "Patient consultation"
   }, {
-    src: "/src/assets/ty-williams-YtVglBZ1p34-unsplash.jpg",
+    src: tyWilliams,
     alt: "Modern vein treatment facility"
   }];
 
