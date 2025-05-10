@@ -32,7 +32,7 @@ const YonkersHero = () => (
           "image": "https://veinrelief.com/assets/Adobe%20Express%20-%20file%20(1).png",
           "@id": "https://veinrelief.com/locations/yonkers-ny",
           "url": "https://veinrelief.com/locations/yonkers-ny",
-          "telephone": "(316) 555-0116",
+          "telephone": "914-344-6743",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "984 N Broadway Suite LL03",
@@ -153,7 +153,7 @@ const YonkersFAQ = () => (
         </div>
         <div>
           <h3 className="text-lg font-semibold text-black mb-2">How do I schedule a consultation at Yonkers Vein Relief?</h3>
-          <p className="text-gray-700">Call us at <a href="tel:(316)555-0116" className="text-emergency-red font-semibold">(316) 555-0116</a> or use our online form to request an appointment. We welcome new patients from Yonkers and the surrounding area!</p>
+          <p className="text-gray-700">Call us at <a href="tel:9143446743" className="text-emergency-red font-semibold">914-344-6743</a> or use our online form to request an appointment. We welcome new patients from Yonkers and the surrounding area!</p>
         </div>
       </div>
     </div>
